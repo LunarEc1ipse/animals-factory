@@ -1,6 +1,5 @@
 package com.simbirsoft;
-
-public class Animal {
+class Animal {
 
     double weight;
     String name;
@@ -53,4 +52,13 @@ public class Animal {
         }
         return ageGroup;
     }
+
+    protected void animalDescription(){
+        if (name ==  null) {
+            System.out.println(ageGroup + " весом " + weight);
+            return;
+        }
+        System.out.println(ageGroup + " по кличке " + name + " весом " + weight);
+    }
+
 }

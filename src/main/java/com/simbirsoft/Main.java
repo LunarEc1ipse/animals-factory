@@ -16,10 +16,12 @@ public class Main {
         Cat cat =new Cat(3,5);
         int currentHour = Integer.parseInt(dateFormat.format(date));
 
+        cat.setName("КОТ");
         cat.definitionAgeGroup();
         System.out.println(cat.definitionAgeGroup());
         cat.saySomething();
         cat.sleepAllDay(currentHour);
+        cat.animalDescription();
 
 
     }
