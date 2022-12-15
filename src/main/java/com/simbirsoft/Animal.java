@@ -2,14 +2,14 @@ package com.simbirsoft;
 
 class Animal {
 
-    protected double weight;
-    protected String name;
-    protected String voice;
-    protected int age;
+    private double weight;
+    private String name;
+    private String voice;
+    private int age;
+    private boolean ismail;
     protected String[] ageGroups;
     protected String[] maleAgeGroups;
     protected String ageGroup;
-    protected  boolean ismail;
     protected String owner;
 
     protected Animal(double weight, int age, boolean ismail) {
@@ -18,8 +18,28 @@ class Animal {
         this.ismail = ismail;
     }
 
+    public double getWeight() {
+        return weight;
+    }
+
     protected void setName(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setVoice(String voice) {
+        this.voice = voice;
+    }
+
+    public boolean isIsmail() {
+        return ismail;
     }
 
     protected void saySomething() {
@@ -40,10 +60,10 @@ class Animal {
 
     protected void animalDescription() {
         if (name == null) {
-            System.out.println(definitionAgeGroup() + " весом " + weight);
+            System.out.println(definitionAgeGroup() + " весом " + getWeight());
             return;
         }
-        System.out.println(definitionAgeGroup() + " по имени " + name + " весом " + weight);
+        System.out.println(definitionAgeGroup() + " по имени " + getName() + " весом " + getWeight());
     }
 
 }

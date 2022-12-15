@@ -7,21 +7,21 @@ public class Cow extends Animal {
 
     public Cow(double weight, int age, boolean ismail) {
         super(weight, age, ismail);
-        this.voice = "Му";
+        this.setVoice("Му");
         this.ageGroups = new String[]{"Теленок", "Корова", "Старая корова"};
         this.maleAgeGroups = new String[]{"Теленок", "Бык", "Стараый бык"};
     }
 
     @Override
     protected String definitionAgeGroup() {
-        if (ismail) {
+        if (isIsmail()) {
             groups = maleAgeGroups;
         } else {
             groups = ageGroups;
         }
-        if (age <= 2) {
+        if (getAge() <= 2) {
             ageGroup = groups[0];
-        } else if (age < 15) {
+        } else if (getAge() < 15) {
             ageGroup = groups[1];
         } else {
             ageGroup = groups[2];
@@ -30,7 +30,7 @@ public class Cow extends Animal {
     }
 
     protected int giveMilkPerDay() {
-        if (ismail) {
+        if (isIsmail()) {
             return 0;
         }
         if (Objects.equals(definitionAgeGroup(), ageGroups[0])) {
@@ -44,12 +44,12 @@ public class Cow extends Animal {
 
     @Override
     protected void animalDescription() {
-        if (name == null) {
-            System.out.println(definitionAgeGroup() + " весом " + weight +
+        if (getName() == null) {
+            System.out.println(definitionAgeGroup() + " весом " + getWeight() +
                     " дает " + giveMilkPerDay() + "л молока в день");
             return;
         }
-        System.out.println(definitionAgeGroup() + " по кличке " + name + " весом " + weight +
+        System.out.println(definitionAgeGroup() + " по кличке " + getName() + " весом " + getWeight() +
                 " дает " + giveMilkPerDay() + "л молока в день");
     }
 }

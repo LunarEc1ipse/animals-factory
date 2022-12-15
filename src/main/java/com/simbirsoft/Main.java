@@ -26,7 +26,7 @@ public class Main {
         cow.animalDescription();
         human.buyAnimal(human1, "Вася").animalDescription();
 
-        System.out.println(cat.owner);
+        System.out.println(cow.owner);
 
 
     }

@@ -4,15 +4,15 @@ public class Human extends Animal {
 
     protected Human(double weight, int age, boolean ismail, String name) {
         super(weight, age, ismail);
-        this.name = name;
+        this.setName(name);
         this.ageGroups = new String[]{"Ребенок", "Взрослый", "Пожилой"};
     }
 
     @Override
     protected String definitionAgeGroup() {
-        if (age <= 18) {
+        if (getAge() <= 18) {
             ageGroup = ageGroups[0];
-        } else if (age < 60) {
+        } else if (getAge() < 60) {
             ageGroup = ageGroups[1];
         } else {
             ageGroup = ageGroups[2];
@@ -30,7 +30,7 @@ public class Human extends Animal {
             System.exit(0);
         }
         animal.setName(name);
-        animal.owner = this.name;
+        animal.owner = this.getName();
         return animal;
     }
 

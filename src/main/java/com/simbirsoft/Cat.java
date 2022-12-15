@@ -4,7 +4,7 @@ public class Cat extends Animal {
 
     public Cat(double weight, int age, boolean ismail) {
         super(weight, age, ismail);
-        this.voice = "Мяу";
+        this.setVoice("Мяу");
         this.ageGroups = new String[]{"Котенок", "Кот побольше", "Вообще взрослый кот"};
 
     }
