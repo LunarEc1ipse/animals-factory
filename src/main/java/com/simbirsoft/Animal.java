@@ -43,7 +43,7 @@ class Animal {
             System.out.println(definitionAgeGroup() + " весом " + weight);
             return;
         }
-        System.out.println(definitionAgeGroup() + " по кличке " + name + " весом " + weight);
+        System.out.println(definitionAgeGroup() + " по имени " + name + " весом " + weight);
     }
 
 }

@@ -8,6 +8,7 @@ public class Human extends Animal {
         this.ageGroups = new String[]{"Ребенок", "Взрослый", "Пожилой"};
     }
 
+    @Override
     protected String definitionAgeGroup() {
         if (age <= 18) {
             ageGroup = ageGroups[0];

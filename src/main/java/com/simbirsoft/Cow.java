@@ -12,6 +12,7 @@ public class Cow extends Animal {
         this.maleAgeGroups = new String[]{"Теленок", "Бык", "Стараый бык"};
     }
 
+    @Override
     protected String definitionAgeGroup() {
         if (ismail) {
             groups = maleAgeGroups;
@@ -41,6 +42,7 @@ public class Cow extends Animal {
         }
     }
 
+    @Override
     protected void animalDescription() {
         if (name == null) {
             System.out.println(definitionAgeGroup() + " весом " + weight +
