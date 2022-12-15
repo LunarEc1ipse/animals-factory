@@ -2,15 +2,15 @@ package com.simbirsoft;
 
 class Animal {
 
-    double weight;
-    String name;
-    String voice;
-    int age;
-    String[] ageGroups;
-    String[] maleAgeGroups;
-    String ageGroup;
-    boolean ismail;
-    String owner;
+    protected double weight;
+    protected String name;
+    protected String voice;
+    protected int age;
+    protected String[] ageGroups;
+    protected String[] maleAgeGroups;
+    protected String ageGroup;
+    protected  boolean ismail;
+    protected String owner;
 
     protected Animal(double weight, int age, boolean ismail) {
         this.weight = weight;
